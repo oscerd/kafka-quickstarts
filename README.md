@@ -4,6 +4,10 @@ A set of Apache Kafka Quickstarts
 
 - Download a recent stable version of Apache Kafka (0.8.2.1)
 
+- Untar the package
+
+- Enter into Kafka directory
+
 - Start Zookeeper Server
 
 ```

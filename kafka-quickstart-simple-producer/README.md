@@ -1,5 +1,3 @@
-A set of Apache Kafka Quickstarts
-
 ## Simple Producer
 
 - Download a recent stable version of Apache Kafka (0.8.2.1)

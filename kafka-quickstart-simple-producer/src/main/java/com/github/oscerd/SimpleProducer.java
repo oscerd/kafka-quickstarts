@@ -17,7 +17,7 @@ public class SimpleProducer {
 
         KafkaProducer<String, String> prod = new KafkaProducer<String, String>(props);
 
-        ProducerRecord<String, String> record = new ProducerRecord<String, String>("test", "Jod sucks");
+        ProducerRecord<String, String> record = new ProducerRecord<String, String>("test", "Jod");
         prod.send(record);
 
         prod.close();

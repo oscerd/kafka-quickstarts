@@ -1,4 +1,4 @@
-## Simple Producer
+## Producer and multiple Topics
 
 - Download a recent stable version of Apache Kafka (0.8.2.1)
 

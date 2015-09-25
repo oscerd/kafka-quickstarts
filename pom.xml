@@ -47,5 +47,6 @@
   <modules>
     <module>kafka-quickstart-simple-producer</module>
     <module>kafka-quickstart-producer-multiple-topics</module>
+    <module>kafka-quickstart-producer-partitions</module>
   </modules>
 </project>

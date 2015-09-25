@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.oscerd</groupId>
@@ -17,6 +18,11 @@
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
 			<version>0.8.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
 		</dependency>
 	</dependencies>
 
@@ -44,9 +50,9 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-  <modules>
-    <module>kafka-quickstart-simple-producer</module>
-    <module>kafka-quickstart-producer-multiple-topics</module>
-    <module>kafka-quickstart-producer-partitions</module>
-  </modules>
+	<modules>
+		<module>kafka-quickstart-simple-producer</module>
+		<module>kafka-quickstart-producer-multiple-topics</module>
+		<module>kafka-quickstart-producer-partitions</module>
+	</modules>
 </project>

@@ -9,16 +9,17 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.apache.log4j.Logger;
 
 public class SimplePartitionsProducer {
 
     public static void main(String[] args) {
 
+        Logger LOG = Logger.getLogger(SimplePartitionsProducer.class);
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092");
         props.put("key.serializer", StringSerializer.class.getName());
         props.put("value.serializer", StringSerializer.class.getName());
-        props.put("partitioner.class", "com.github.oscerd.SimplePartitioner");
 
         Random rnd = new Random(new Long(200));
         KafkaProducer<String, String> prod = new KafkaProducer<String, String>(props);
@@ -30,7 +31,7 @@ public class SimplePartitionsProducer {
             Future<RecordMetadata> l = prod.send(record);
             try {
                 RecordMetadata meta = l.get();
-                System.out.println("Metadata: Write message [ " + msg + " ] with key [ " + key + " ] on partition [ " + meta.partition() + " ]");
+                LOG.info("Metadata: Write message [ " + msg + " ] with key [ " + key + " ] on partition [ " + meta.partition() + " ]");
             }
             catch (InterruptedException e) {
                 // TODO Auto-generated catch block

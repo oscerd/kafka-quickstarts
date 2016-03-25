@@ -27,7 +27,7 @@ public class SimplePartitionsProducer {
         for (int i = 0; i < 100; i++) {
             String key = String.valueOf(rnd.nextInt(Integer.MAX_VALUE));
             String msg = String.valueOf(System.currentTimeMillis());
-            ProducerRecord<String, String> record = new ProducerRecord<String, String>("test", key, msg);
+            ProducerRecord<String, String> record = new ProducerRecord<String, String>("test1", key, msg);
             Future<RecordMetadata> l = prod.send(record);
             try {
                 RecordMetadata meta = l.get();

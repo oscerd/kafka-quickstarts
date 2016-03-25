@@ -1,6 +1,6 @@
 ## Simple Producer
 
-- Download a recent stable version of Apache Kafka (0.8.2.1)
+- Download a recent stable version of Apache Kafka (0.9.0.1)
 
 - Untar the package
 

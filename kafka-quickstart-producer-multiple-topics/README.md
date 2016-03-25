@@ -1,6 +1,6 @@
 ## Producer and multiple Topics
 
-- Download a recent stable version of Apache Kafka (0.8.2.1)
+- Download a recent stable version of Apache Kafka (0.9.0.1)
 
 - Untar the package
 
@@ -21,25 +21,25 @@ bin/kafka-server-start.sh config/server.properties
 - Create a topic test (if not exists)
 
 ```
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test2
 ```
 
 - Create a topic test1 (if not exists)
 
 ```
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test1
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test3
 ```
 
 - Start consumer on topic test
 
 ```
-bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test2 --from-beginning
 ```
 
 - Start consumer on topic test1
 
 ```
-bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test1 --from-beginning
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test3 --from-beginning
 ```
 
 - Run mvn clean compile exec:exec

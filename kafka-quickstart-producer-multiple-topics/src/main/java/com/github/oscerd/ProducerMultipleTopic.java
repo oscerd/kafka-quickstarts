@@ -17,8 +17,8 @@ public class ProducerMultipleTopic {
         
         KafkaProducer<String, String> prod = new KafkaProducer<String, String>(props);
 
-        ProducerRecord<String, String> data1 = new ProducerRecord<String, String>("test", "test");
-        ProducerRecord<String, String> data2 = new ProducerRecord<String, String>("test1", "test1");
+        ProducerRecord<String, String> data1 = new ProducerRecord<String, String>("test2", "test2");
+        ProducerRecord<String, String> data2 = new ProducerRecord<String, String>("test3", "test3");
 
         prod.send(data1);
         prod.send(data2);
